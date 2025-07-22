@@ -1,0 +1,9 @@
+MATCH (r:Room)-[:HAS_SENSOR]->(s:Sensor)
+RETURN r.name AS room, s.type AS sensor_type, s.value AS value, s.timestamp AS timestamp
+ORDER BY r.name, s.type, s.timestamp
+
+MATCH (r:Room {name: "Room1"}), (s:Sensor {type: "Temperature"})
+MERGE (r)-[:HAS_SENSOR]->(s)
+
+MATCH (r:Room)-[rel:HAS_SENSOR]->(s:Sensor)
+RETURN r, rel, s
