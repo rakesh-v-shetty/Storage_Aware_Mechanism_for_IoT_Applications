@@ -1,1 +1,1 @@
-# Storage_Aware_Mechanism_for_IoT_Applications
+# STORM: Storage-Optimized Resource Manager for IoT
